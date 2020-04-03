@@ -7,25 +7,25 @@ app = Flask(__name__)
 @app.route('/')
 def numeros_primos():
 
-    limite=100
-    qtdprimo = 2
-    numero = 3
+    
+    ordem_p = 2
+    num = 3
 
-    primos = "1,2,"
+    org = "2-"
 
-    while qtdprimo < limite:
-        ehprimo = 1
-        for i in  range (2, numero):
-            if numero % i == 0:
-                ehprimo = 0
+    while ordem_p < 101:
+        primo = 1
+        for i in  range (2, num):
+            if num % i == 0:
+                primo = 0
                 break
-        if (ehprimo):
-            primos = primos + str(numero) + ","
-            qtdprimo += 1
-            if(qtdprimo % 10 ==0):
-                primos = primos + "->" + str(qtdprimo) + "<br>"
-        numero+=1
-    return primos
+        if (primo):
+            org = org + str(num) + "-"
+            ordem_p += 1
+            if(ordem_p % 10 ==0):
+                org = org + "->" + str(ordem_p) + "<br>"
+        num+=1
+    return org
 
     if __name__ == "__main__":
         port = int(os.environ.get("PORT", 5000))
