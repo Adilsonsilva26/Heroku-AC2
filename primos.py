@@ -22,8 +22,6 @@ def numeros_primos():
         if (primo):
             org = org + str(num) + "-"
             ordem_p += 1
-            if(ordem_p % 20 ==0):
-                org = org + "->" + str(ordem_p) + "<br>"
         num+=1
     return org
 
