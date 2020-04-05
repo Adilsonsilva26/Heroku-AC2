@@ -22,12 +22,13 @@ def numeros_primos():
         if (primo):
             org = org + str(num) + "-"
             ordem_p += 1
-            if(ordem_p % 10 ==0):
+            if(ordem_p % 20 ==0):
                 org = org + "->" + str(ordem_p) + "<br>"
         num+=1
     return org
 
-    if __name__ == "__main__":
-        port = int(os.environ.get("PORT", 5000))
-        app.run(host='0.0.0.0', port=port)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+  
 
